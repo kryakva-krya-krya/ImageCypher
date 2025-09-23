@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 using ImageCypherLib;
-using static ImageCypherLib.ImageCypherLib;
+using static ImageCypherLib.Cypher;
 
 namespace ImageCypher
 {
