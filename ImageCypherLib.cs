@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ImageCypherLib
 {
-    public class ImageCypherLib
+    public static class Cypher
     {
         //Decode
         public static BitArray DecypherImage(Bitmap image, bool filterZeroBytes)
