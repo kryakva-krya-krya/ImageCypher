@@ -54,12 +54,18 @@ namespace ImageCypherLib
             {
                 for (int j = 0; j < image.Width; j++)
                 {
+                    if (IsTransparent(image.GetPixel(j, i))) image.SetPixel(j, i, Color.White);
                     image.SetPixel(j, i, CypherPixel(image.GetPixel(j, i), messageBits, count));
                     count += 3;
                 }
             }
             Console.WriteLine();
             return image;
+        }
+
+        private static bool IsTransparent(Color pixel)
+        {
+            return pixel.R == 0 && pixel.G == 0 && pixel.B == 0;
         }
 
         private static Color CypherPixel(Color pixel, BitArray message, int counter)
